@@ -6,8 +6,6 @@ script:
 cache: cargo
 branches:
   only:
-    - development
-    - master
     - /^\d+\.\d+\.\d+$/
 matrix:
   include:
@@ -29,9 +27,9 @@ deploy:
   skip_cleanup: true
   provider: releases
   api_key:
-    secure: Rw/IBYhS7nX1J5R4MsiH5QhDoDcfoComqo88sftS9tduS0KucCi3fHvMKfZ02eoYHOL23DwsyfpnN+zHJGtmmbwQXXe3dqj+5DcYRUdukdIlJmSl3saF+U9fkW9BCr/E/eNgrhDwDtUxo0u3CALot/UNr2JUtWxiaE/03hPB2VU5Jd7S9p4l+AyMzraIeJCGnSC7nNWLdgl1hOBxF7lIUPH7WgdHhaX4M0xuw6P0kd8i4g3vK8LJJ5NOd2M0q/2CDeym8tsU3FBf+gnf19JplYZp/KGpneiyoYFcydj2TlqCu4yqDLxrkQkCCum64tpHR1rGR9tDXJJS3roQ7A51ot0gVyt2aQvuF6Atl1+0u8xP+3jLaXSEXhRhXko3jpuJdBk3MxlRaqI8uXam5n0kBduybnmAjHDnF1Rsg/JBlWifLqbwWhS2Tgd8OA9jig6x9b6r5s0lyT0W8iQAqz+6VGH+p6a8h1mx4GXsg7eYzabbeHpjsds2QU07rlUUCUYFk96QYqv4Cu7HhGSy3yZaMnC4AqOIBl7ECt8FVh4A6EQvrV82adwF1ZVDoRfX2WThgfUd3YZs77bnF5AbbSnCnWbBXhmIBidLS0Z1Z45iHVuLRmuL95K2lHyWCV56NMRc87ck8dcu305ZwyfURGO0PbvPUAR+5DZyjdB1ZPZ7HBI=
+    secure: q+kg5xTmoOK4ZnM4FZI0gh7P1zKCh8VRVdww8ujlAxnKvS/WposkPymxQPD/tvdaIuGMCIQN5sL/C/W0R50GJ9lDNkKA9TmfUjHbmFO7kseFjAPMD2MgaK4bIOS7L7BrmGlFZ8lL71IRr259br20t7SFEWP2OOvbkF0Zzj9ItRUZNmYc/ToGzoIfy8b5fF48OO1OLx+XdtMrUIq3BmqzeAwVQ1SU3H+9e2n5CBXa8Lvod1rCylHleHoN0E/Ko44k/M7TDbydMd4bvTpKdWlrEwtJ5vUBxAS/KoKQyWX9gNttZSTlpKfDgwXKz/WXmdkYb7E3mnHSIFQqfQFCZVOPLSUtj+De1eJd8LTu8F1NgrtV8E7G+fxM+Hy0Ed5ePVXh0i0zT3qWdbN1sSJM9a983a4+p2sEkKlW7wMD4OQ12WIGOdPeqgxqVBRbsalu9pt3zDjs63rnQpv8uQhQQbS2D74kW4KasKFHgf0qDhfLmqjvHZV6OVfFzJH3Hlq356cMRakfVkQ1u4hNS6fzzXiDN+tjxiTvXvUUdiIRctBiey5TKbuqCUyZqDSW2zfhBQzGvlRlNQfZsfjOrCM5nelxkXDfA7lcuwDCuAVMb0tgchW7D7dxkz6UHmYro5r2pkebwf3zIqA1Q7J87laWtcj3HvPl0SegH13+brORycIyYQo=
   file: "$TARGET.zip"
   on:
-    repo: Axosoft/git-rs
+    repo: implausible/git-rs
     tags: true
     condition: "$DO_DEPLOY"
